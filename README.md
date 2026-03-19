@@ -11,7 +11,7 @@ Default commands:
 - Make guess
 - Colour calibration (only needed if the code mixes up yellow and green tiles)
 - Exit
-How to Use
+How to Use:
 - Hover your mouse over the top-left of the Wordle grid and press 1
 - Hover your mouse over the bottom-right of the Wordle grid and press 2
 - Press 3 to make a guess

@@ -1,4 +1,6 @@
-To install, run:
+To install, 
+Download all files into a python environment
+run:
 pip install -r requirements.txt
 
 

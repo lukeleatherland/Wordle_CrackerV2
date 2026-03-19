@@ -19,3 +19,5 @@ How to Use:
 - Press 3 to make a guess
 - The code will stop once the word is found
 - Make sure the Wordle window is active when the program types the guess — otherwise it may fail
+
+This was heavily insprired by 3Blue1Brown's video on the idea: https://www.youtube.com/watch?v=v68zYyaEmEA

@@ -181,7 +181,7 @@ def entropy_for_guess(guess, candidates): #For each word find all the possible g
         ent -= p * math.log2(p) #information entropy calculation
     return ent
 
-def get_best_word_by_entropy(guess_list, candidates): #For every possible word find the amount of possibly outcomes of green yellow and grey letters
+def get_best_word_by_entropy(guess_list, candidates): #For every possible word find the amount of possible outcomes of green yellow and grey letters
     best_word = None
     best_score = -1.0
     for g in guess_list:
@@ -190,16 +190,6 @@ def get_best_word_by_entropy(guess_list, candidates): #For every possible word f
             best_score = s
             best_word = g
     return best_word, best_score
-
-# ----- Frequency-based fallback for large candidate sets -----
-def get_best_word_by_frequency(word_list, top_k_letters=5):
-    letter_counts = defaultdict(int)
-    for word in word_list:
-        for letter in set(word):
-            letter_counts[letter] += 1
-    sorted_letters = [l for l, _ in sorted(letter_counts.items(), key=lambda x: -x[1])]
-    top_letters = set(sorted_letters[:top_k_letters])
-    return max(word_list, key=lambda w: sum(1 for l in set(w) if l in top_letters))
 
 # guess selector
 def get_best_guess(candidates, all_words, solution_words, threshold=10):
@@ -242,7 +232,7 @@ def typer():
 
         current_solutions = filter_words(current_solutions, best_word, feedback)
         print(f"Words remaining: {len(current_solutions)}")
-        if len(current_solutions) <= 40:
+        if len(current_solutions) <= 40: #shows the possible solutions when there is less than 40
             print("Possible words:", current_solutions)
 
         word_count += 1

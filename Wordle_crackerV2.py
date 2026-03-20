@@ -21,7 +21,7 @@ current_solutions = solution_words[:]  # current solutions
 word_count = 1
 lock = threading.Lock()
 
-# BGR colour (update these with f8)
+# BGR colour (update these with 4)
 green  = (81, 132, 85)
 yellow = (65, 140, 156)
 grey   = (67, 65, 65)
